@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.8/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.8/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.8/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"Parent Mapping","children":[{"content":"Base Metadata","children":[{"content":"Base Metadata Experiment Description","children":[{"content":"subject_id","children":[],"payload":{"tag":"li","lines":"5,6"}},{"content":"session_date","children":[],"payload":{"tag":"li","lines":"6,7"}},{"content":"nwb_suffix","children":[],"payload":{"tag":"li","lines":"7,8"}},{"content":"session","children":[],"payload":{"tag":"li","lines":"8,9"}},{"content":"rig","children":[],"payload":{"tag":"li","lines":"9,10"}},{"content":"user_name","children":[],"payload":{"tag":"li","lines":"10,11"}},{"content":"curriculum_version","children":[],"payload":{"tag":"li","lines":"11,12"}},{"content":"current_stage_actual","children":[],"payload":{"tag":"li","lines":"12,13"}},{"content":"task","children":[],"payload":{"tag":"li","lines":"13,15"}}],"payload":{"tag":"h3","lines":"4,5"}},{"content":"Base Metadata Subject Description","children":[{"content":"water_in_session_foraging","children":[],"payload":{"tag":"li","lines":"16,17"}},{"content":"water_in_session_manual","children":[],"payload":{"tag":"li","lines":"17,18"}},{"content":"water_in_session_total","children":[],"payload":{"tag":"li","lines":"18,19"}},{"content":"water_after_session","children":[],"payload":{"tag":"li","lines":"19,20"}},{"content":"water_day_total","children":[],"payload":{"tag":"li","lines":"20,21"}},{"content":"base_weight","children":[],"payload":{"tag":"li","lines":"21,22"}},{"content":"target_weight","children":[],"payload":{"tag":"li","lines":"22,23"}},{"content":"target_weight_ratio","children":[],"payload":{"tag":"li","lines":"23,24"}},{"content":"weight_after","children":[],"payload":{"tag":"li","lines":"24,25"}},{"content":"weight_after_ratio","children":[],"payload":{"tag":"li","lines":"25,27"}}],"payload":{"tag":"h3","lines":"15,16"}}],"payload":{"tag":"h2","lines":"2,3"}},{"content":"Experimental Features","children":[{"content":"Experimental Features Reward","children":[{"content":"p_reward_sum_mean","children":[],"payload":{"tag":"li","lines":"30,31"}},{"content":"p_reward_contrast_mean","children":[],"payload":{"tag":"li","lines":"31,32"}},{"content":"reward_volume_left_mean","children":[],"payload":{"tag":"li","lines":"32,33"}},{"content":"reward_volume_right_mean","children":[],"payload":{"tag":"li","lines":"33,35"}}],"payload":{"tag":"h3","lines":"29,30"}},{"content":"Experimental Features Duration","children":[{"content":"effective_block_length_mean","children":[],"payload":{"tag":"li","lines":"36,37"}},{"content":"duration_gocue_stop_mean","children":[],"payload":{"tag":"li","lines":"37,38"}},{"content":"duration_delay_period_mean","children":[],"payload":{"tag":"li","lines":"38,39"}},{"content":"duration_iti_mean","children":[],"payload":{"tag":"li","lines":"39,41"}}],"payload":{"tag":"h3","lines":"35,36"}}],"payload":{"tag":"h2","lines":"27,28"}},{"content":"Performance Features","children":[{"content":"Performance Features Basic","children":[{"content":"finished_rate_with_autowater","children":[],"payload":{"tag":"li","lines":"44,45"}},{"content":"ignore_rate_with_autowater","children":[],"payload":{"tag":"li","lines":"45,46"}},{"content":"autowater_collected","children":[],"payload":{"tag":"li","lines":"46,47"}},{"content":"autowater_ignored","children":[],"payload":{"tag":"li","lines":"47,48"}},{"content":"total_trials","children":[],"payload":{"tag":"li","lines":"48,49"}},{"content":"finished_trials","children":[],"payload":{"tag":"li","lines":"49,50"}},{"content":"ignored_trials","children":[],"payload":{"tag":"li","lines":"50,51"}},{"content":"finished_rate","children":[],"payload":{"tag":"li","lines":"51,52"}},{"content":"ignore_rate","children":[],"payload":{"tag":"li","lines":"52,53"}},{"content":"reward_trials","children":[],"payload":{"tag":"li","lines":"53,54"}},{"content":"reward_rate","children":[],"payload":{"tag":"li","lines":"54,56"}}],"payload":{"tag":"h3","lines":"43,44"}},{"content":"Performance Features Multivariate","children":[{"content":"foraging_eff","children":[],"payload":{"tag":"li","lines":"57,58"}},{"content":"foraging_eff_random_seed","children":[],"payload":{"tag":"li","lines":"58,59"}},{"content":"foraging_performance","children":[],"payload":{"tag":"li","lines":"59,60"}},{"content":"foraging_performance_random_seed","children":[],"payload":{"tag":"li","lines":"60,61"}},{"content":"foraging_choice","children":[],"payload":{"tag":"li","lines":"61,62"}},{"content":"foraging_choice_global","children":[],"payload":{"tag":"li","lines":"62,63"}},{"content":"bias_naive","children":[],"payload":{"tag":"li","lines":"63,65"}}],"payload":{"tag":"h3","lines":"56,57"}}],"payload":{"tag":"h2","lines":"41,42"}},{"content":"Motivation Features","children":[{"content":"Motivation Features Licking","children":[{"content":"early_lick_rate","children":[],"payload":{"tag":"li","lines":"68,69"}},{"content":"invalid_lick_ratio","children":[],"payload":{"tag":"li","lines":"69,70"}},{"content":"double_dipping_rate_finished_trials","children":[],"payload":{"tag":"li","lines":"70,71"}},{"content":"double_dipping_rate_finished_reward_trials","children":[],"payload":{"tag":"li","lines":"71,72"}},{"content":"double_dipping_rate_finished_noreward_trials","children":[],"payload":{"tag":"li","lines":"72,73"}},{"content":"lick_consistency_mean_finished_trials","children":[],"payload":{"tag":"li","lines":"73,74"}},{"content":"lick_consistency_mean_finished_reward_trials","children":[],"payload":{"tag":"li","lines":"74,75"}},{"content":"lick_consistency_mean_finished_noreward_trials","children":[],"payload":{"tag":"li","lines":"75,77"}}],"payload":{"tag":"h3","lines":"67,68"}},{"content":"Motivation Features Reaction","children":[{"content":"reaction_time_median","children":[],"payload":{"tag":"li","lines":"78,79"}},{"content":"reaction_time_mean","children":[],"payload":{"tag":"li","lines":"79,80"}}],"payload":{"tag":"h3","lines":"77,78"}}],"payload":{"tag":"h2","lines":"65,66"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

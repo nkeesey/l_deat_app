@@ -1,16 +1,11 @@
 import pandas as pd
 import numpy as np
-import plotly.express as px
-import plotly.graph_objects as go
-from sklearn.decomposition import PCA
-from sklearn.manifold import TSNE
 from sklearn.preprocessing import StandardScaler
 from umap.umap_ import UMAP
-from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 import dash_cytoscape as cyto
 import networkx as nx
 
-
+from aind_analysis_arch_result_access.han_pipeline import get_session_table 
 from app.computations.utils import behavior_utils as bu
 from app.computations.utils import ml_utils as ml
 
@@ -81,11 +76,11 @@ performance_features = [
 
 ## Data loading and preprocessing functions
 
-def load_data(filepath='/Users/nickkeesey/projects/l_deat_app/l_deat_app/data/current_2025301.csv'):
+def load_data(load_bpod = False):
     """ Load data from file """
     try:
-        df = pd.read_csv(filepath)
-        print(f'Loaded {len(df)} rows from {filepath}')
+        df = get_session_table(if_load_bpod = load_bpod)
+        print(f'Loaded {len(df)} rows from session table')
         return df
     except Exception as e:
         print(f'Error loading data: {str(e)}')

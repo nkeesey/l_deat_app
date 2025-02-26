@@ -4,7 +4,7 @@ from .header import Header
 from .sidebar import Sidebar
 
 class DashboardLayout:
-    def __init__(self, df, network_figure):  # Add network_figure parameter
+    def __init__(self, df, network_figure):
         self.df = df
         self.network_figure = network_figure
         
@@ -21,7 +21,7 @@ class DashboardLayout:
                     
                     # Main plot area
                     dbc.Col([
-                        # Network plot - create initial plot
+                        # Network plot
                         html.Div(
                             self.network_figure.create(),
                             id='dim-reduction-plot'

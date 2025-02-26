@@ -13,9 +13,6 @@ This app is still in development, incoming updates will be posted. Current capab
     - Task
     - Stage
 
-## The GUI
-<img src="https://github.com/nkeesey/dynamic_forager_app/blob/master/app/assets/README.png" width=500>
- 
 ## To Use:
 
 Create a copy of this repo and run locally, you will need to pull a CSV for the data source

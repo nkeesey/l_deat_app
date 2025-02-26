@@ -15,12 +15,12 @@ class NetworkFigure(BaseFigure):
             df=self.data,
             df_node_info=self.data,
             dim_reduction_results=self.data,
-            method='UMAP',  # Change this to match your column names
+            method='UMAP',
             connect_by_column='task'
         )
         
         return cyto.Cytoscape(
-            id='dim-reduction-cytoscape',  # This ID must match your callbacks
+            id='dim-reduction-cytoscape',
             elements=nodes + edges,
             stylesheet=self.stylesheet,
             style={'width': '100%', 'height': '800px'},
@@ -45,7 +45,6 @@ class NetworkFigure(BaseFigure):
         x_col = f'{method.upper()}1'
         y_col = f'{method.upper()}2'
 
-        # Normalize coordinates for better visualization
         x_scaler = MinMaxScaler(feature_range=(100, 900))
         y_scaler = MinMaxScaler(feature_range=(100, 900))
         
@@ -67,7 +66,6 @@ class NetworkFigure(BaseFigure):
                 'task': str(node_info['task'])
             }
             
-            # Optionally add foraging_eff if it exists
             if 'foraging_eff' in node_info:
                 node_data['foraging_eff'] = str(node_info['foraging_eff'])
             
